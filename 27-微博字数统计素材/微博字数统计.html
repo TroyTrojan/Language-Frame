@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8" />
+   <title>微博字数统计</title>
+   <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+
+   <style type="text/css">
+      .textColor {
+         color: #C00;
+      }
+
+      .input {
+         height: 60px;
+         width: 400px
+      }
+   </style>
+</head>
+
+<body>
+   <div id="edit_myfrom">
+      <form action="" method="post">
+         <p id="numtj">你还可以输入<var class="textColor">100</var>个字符。</p>
+         <p class="textinput"><label><textarea name="" cols="" rows="" maxlength="110" class="input"></textarea></label>
+         </p>
+      </form>
+   </div>
+   <script>
+      $('textarea').keyup(function () {
+         var t = $('textarea').val()
+         var s = t.length
+         if (s <= 100) {
+            var num = 100 - s
+            $('var').html(num)
+         } else {
+            $('var').html('对不起，输入的字符超长了!')
+            $('textarea').prop('disabled', true)
+         }
+      })
+   </script>
+</body>
+
+</html>

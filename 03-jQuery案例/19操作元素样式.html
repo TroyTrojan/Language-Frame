@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .x {
+            background-color: pink;
+        }
+
+        .y {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>cccc</p>
+    <button>单击</button>
+    <script>
+        // 单击次数为三的倍数时触发
+        // var n = 0
+        // $('button').click(function () {
+        //     $('p').toggleClass('x', ++n % 3 === 0)
+        // })
+        $('button').click(function () {
+            $('p').css({
+                height: function (x, y) {
+                    if (x == 0) {
+                        return 200 + 'px'
+                    }
+                },
+                background: function (x, y) {
+                    if (x == 1) {
+                        return 'green'
+                    }
+                },
+                width: function (x, y) {
+                    if (x == 2) {
+                        return (parseInt(y) + 50) + 'px'
+                    }
+                },
+            })
+        })
+        // var x = $('p').css(['width', 'height', 'backgroundColor'])
+        // console.log(x)
+        //不常用
+        // $('button').click(function () {
+        //     $('p').toggleClass('x y')
+        // })
+    </script>
+</body>
+
+</html>

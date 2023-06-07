@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字变大</title>
+</head>
+
+<body>
+    <input type="button" value="开始">
+    <input type="button" value="结束">
+    <h3 style="font-size: 16px;">hello</h3>
+    <script>
+        let button = document.querySelectorAll('input')
+        let h3 = document.querySelector('h3')
+        button[0].addEventListener('click', function () {
+            time = setInterval(function () {
+                let x = parseInt(h3.style.fontSize)
+                h3.style.fontSize = x + 10 + 'px'
+            }, 500)
+        })
+        button[1].addEventListener('click', function () {
+            clearInterval(time)
+        })
+    </script>
+</body>
+
+</html>

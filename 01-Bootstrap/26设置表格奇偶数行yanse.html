@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .col-6,
+        .col {
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6"><button class="btn btn-outline-dark btn-block">设置偶数行背景为红色</button></div>
+            <div class="col-6"><button class="btn btn-outline-dark btn-block">设置奇数行背景为灰色</button></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead class="text-center">
+                        <tr class="table-warning odd">
+                            <th>图书名称</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-left">
+                        <tr class="table-primary even">
+                            <td>html+css应用实践课程</td>
+                            <td>汪明云，罗斌，罗帅</td>
+                            <td>清华大学出版社</td>
+                        </tr>
+                        <tr class="table-info odd">
+                            <td>程序员的三门课</td>
+                            <td>于君泽，李伟山</td>
+                            <td>电子工业出版社</td>
+                        </tr>
+                        <tr class="table-danger even">
+                            <td>c++ builder精彩编程实例</td>
+                            <td>罗斌</td>
+                            <td>中国水利水电出版社</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelectorAll('.btn')
+        let odd = document.querySelectorAll('.odd')
+        let even = document.querySelectorAll('.even')
+        btn[0].addEventListener('click', function () {
+            even[0].classList.add("table-danger")
+            even[1].classList.add("table-danger")
+        })
+        btn[1].addEventListener('click', function () {
+            odd[0].classList.remove('table-warning')
+            odd[1].classList.remove('table-info')
+            odd[0].classList.add('table-secondary')
+            odd[1].classList.add('table-secondary')
+        })
+    </script>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

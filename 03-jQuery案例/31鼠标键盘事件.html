@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <input type="text">
+    <!-- <div style="height: 2000px;"></div> -->
+    <script>
+        //1.hover(function(){})
+        //只有一个事件处理函数，该函数执行两次
+        // $('input').hover(function () {
+        //     alert(111)
+        // })
+        //2.hover(function(){}, function(){})
+        //前面的函数为移入事件触发，后面的函数为移出事件触发
+        // $('input').hover(function () {
+        //     alert(111)
+        // }, function () {
+        //     $('input').css('background', 'green')
+        // })
+        //1.keyup
+        // $('input').keyup(function () {
+        //     alert(111)
+        // })
+        //2.keypress
+        // $('input').keypress(function () {
+        //     alert(111)
+        // })
+        //3.keydown
+        // $('input').keydown(function () {
+        //     alert(111)
+        // })
+        //1.select文本选定
+        // $('input').select(function () {
+        //     alert('您已选定文本')
+        // })
+        //2.change文本改变
+        // $('input').change(function () {
+        //     alert('您已改变文本')
+        // })
+        //3.resize大小改变
+        // $(window).resize(function () {
+        //     alert('大小被改变')
+        // })
+        //4.scroll滚动
+        $(window).scroll(function () {
+            alert('滚动条已拖动')
+        })
+    </script>
+</body>
+
+</html>

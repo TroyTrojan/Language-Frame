@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>累加和</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #all {
+            width: 600px;
+            height: 400px;
+            margin: 10px auto;
+            border: 15px solid green;
+        }
+
+        h1,
+        h2,
+        .first,
+        .second {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .third {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        button {
+            margin-left: 30px;
+            width: 60px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <h1>计算任意区间内自然数的累加和</h1>
+        <h2>定义区间</h2>
+        <div class="first">
+            起始数：<input type="text">
+            终止数：<input type="text">
+        </div>
+        <div class="second">
+            累加和：<input type="text">
+        </div>
+        <div class="third">
+            <button>计算</button>
+            <button>清空</button>
+        </div>
+    </div>
+    <script>
+        let input = document.querySelectorAll('input')
+        let button = document.querySelectorAll('button')
+        button[0].addEventListener('click', function () {
+            let sum = 0
+            if (input[0].value < input[1].value && input[0].value > 0 && input[1].value > 0) {
+                for (let i = +input[0].value; i <= +input[1].value; i++) {
+                    sum += i
+                    input[2].value = sum
+                }
+            } else {
+                alert('起始数必须小于终止数，请重输！')
+                input[0].value = input[1].value = input[2].value = ''
+            }
+        })
+        button[1].addEventListener('click', function () {
+            input[0].value = input[1].value = input[2].value = ''
+        })
+    </script>
+</body>
+
+</html>
