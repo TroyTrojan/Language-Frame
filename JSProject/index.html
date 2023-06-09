@@ -7,17 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        .test {
+            background-color: red;
+        }
+    </style>
 </head>
 
 <body>
-    <ul>
-        <li id="CCC" class="111">刘三</li>
-        <li id="CCC">赵四</li>
-        <li>王小五</li>
-    </ul>
+    <div id="box">111</div>
     <script>
-        // $('#pic').css({ border: '1px solid red', alt: 'myPhoto' })
-        // $('#CCC').css({ border: '1px solid red' });
+        // $('#box').hasClass('test');
+        // $('#box').add('test');
+        // $('#box').attr('class', 'test');
+        $('#box').addClass('test');
     </script>
 </body>
 

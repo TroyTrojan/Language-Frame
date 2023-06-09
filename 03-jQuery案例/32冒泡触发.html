@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <input type="button" value="第1个按钮" id="btn1">
+    <input type="button" value="第2个按钮" id="btn2">
+    <script>
+        $('#btn1').click(function () {
+            $(this).css('backgroundColor', 'red')
+        })
+        //1.普通事件触发
+        //通过按钮2触发按钮1的单击事件
+        $('#btn2').click(function () {
+            $('#btn1').click()
+        })
+        //2.trigger()触发
+        $('#btn2').click(function () {
+            $('#btn1').trigger('click')
+        })
+    </script>
+</body>
+
+</html>
