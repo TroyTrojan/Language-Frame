@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <input type="text">
+    <button>单击</button>
+    <script>
+        $('input').focus(function () {
+            $('input').val('1111')
+        })
+        // $('button').click(function () {
+        //     $('input').focus()
+        // })
+        // $('button').click(function () {
+        //     $('input').trigger('focus')
+        // })
+        $('button').click(function () {
+            $('input').triggerHandler('focus')
+        })
+    </script>
+</body>
+
+</html>

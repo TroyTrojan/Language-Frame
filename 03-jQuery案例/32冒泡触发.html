@@ -18,12 +18,16 @@
         })
         //1.普通事件触发
         //通过按钮2触发按钮1的单击事件
-        $('#btn2').click(function () {
-            $('#btn1').click()
-        })
+        // $('#btn2').click(function () {
+        //     $('#btn1').click()
+        // })
         //2.trigger()触发
+        // $('#btn2').click(function () {
+        //     $('#btn1').trigger('click')
+        // })
+        //3.triggerHandler()触发
         $('#btn2').click(function () {
-            $('#btn1').trigger('click')
+            $('#btn1').triggerHandler('click')
         })
     </script>
 </body>
