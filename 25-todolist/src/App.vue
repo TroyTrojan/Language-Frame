@@ -8,7 +8,7 @@
           :checkTodo="checkTodo"
           :deleteTodo="deleteTodo"
         />
-        <MyFooter />
+        <MyFooter :todos="todos" :checkAllTodo="checkAllTodo" />
       </div>
     </div>
   </div>
@@ -45,8 +45,13 @@ export default {
       });
     },
     deleteTodo(id) {
-      this.todos.filter((todo) => {
-        return todo.id != id;
+      this.todos = this.todos.filter((todo) => {
+        return todo.id !== id;
+      });
+    },
+    checkAllTodo(done) {
+      this.todos.forEach((todo) => {
+        todo.done = done;
       });
     },
   },

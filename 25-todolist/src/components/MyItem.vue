@@ -8,7 +8,7 @@
       />
       <span>{{ todo.title }}</span>
     </label>
-    <button class="btn btn-danger" @click="handleDelete">删除</button>
+    <button class="btn btn-danger" @click="handleDelete(todo.id)">删除</button>
   </li>
 </template>
 
