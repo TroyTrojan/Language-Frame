@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 100px 0 0 100px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">显示盒子</button>
+    <div id="box"></div>
+    <script>
+        $('#btn').on('click', function () {
+            $('#box').show()
+        })
+        $(window).on('keydown', function (e) {
+            if (e.key === 'Escape') {
+                $('#box').hide()
+            }
+        })
+    </script>
+</body>
+
+</html>
