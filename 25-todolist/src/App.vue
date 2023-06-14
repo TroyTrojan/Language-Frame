@@ -8,7 +8,11 @@
           :checkTodo="checkTodo"
           :deleteTodo="deleteTodo"
         />
-        <MyFooter :todos="todos" :checkAllTodo="checkAllTodo" />
+        <MyFooter
+          :todos="todos"
+          :checkAllTodo="checkAllTodo"
+          :clearAllTodo="clearAllTodo"
+        />
       </div>
     </div>
   </div>
@@ -35,23 +39,32 @@ export default {
     };
   },
   methods: {
+    //添加
     receive(todoObj) {
-      // console.log("can",x);
       this.todos.unshift(todoObj);
     },
+    //勾选和反选
     checkTodo(id) {
       this.todos.forEach((todo) => {
         if (todo.id === id) todo.done = !todo.done;
       });
     },
+    //删除
     deleteTodo(id) {
       this.todos = this.todos.filter((todo) => {
         return todo.id !== id;
       });
     },
+    //全选
     checkAllTodo(done) {
       this.todos.forEach((todo) => {
         todo.done = done;
+      });
+    },
+    //清除已完成任务
+    clearAllTodo() {
+      this.todos = this.todos.filter((todo) => {
+        return !todo.done;
       });
     },
   },
