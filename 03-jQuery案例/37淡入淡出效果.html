@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button>淡入</button>
+    <button>淡入淡出切换</button>
+    <button>淡入淡出透明度设置</button>
+    <button>淡出</button>
+    <div id=""></div>
+    <script>
+        $('button:first').on('click', function () {
+            $('div').fadeIn(1000)
+        })
+        $('button:eq(1)').on('click', function () {
+            $('div').fadeToggle('slow', function () {
+                alert(666)
+            })
+        })
+        $('button:eq(2)').on('click', function () {
+            $('div').fadeTo(1000, 0.6, function () {
+                $('div').css('backgroundColor', 'green')
+            })
+        })
+        $('button:last').on('click', function () {
+            $('div').fadeOut('slow')
+        })
+    </script>
+</body>
+
+</html>

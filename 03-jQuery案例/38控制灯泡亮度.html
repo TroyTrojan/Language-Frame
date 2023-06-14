@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>元素的淡入和淡出</title>
+  <style>
+    div {
+      width: 100px;
+      height: 200px;
+      border: 1px solid #000;
+    }
+
+    div img {
+      width: 100px;
+      height: 200px;
+    }
+
+    div img:first-child {
+      display: none;
+    }
+  </style>
+  <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+  <input type="button" value="开灯">
+  <div>
+    <img src="img/on.png" alt="">
+    <img src="img/off.png" alt="">
+  </div>
+  <script>
+    $(function () {
+      //单击按钮，灯泡由暗变亮，按钮的value值变为“ 灯亮了”
+      $('input[type=button]').on('click', function () {
+        $('img:last').fadeTo(600, 0, function () {
+          $('img:first').fadeTo(600, 1, function () {
+            $('input[type=button]').val('灯亮了')
+          })
+        })
+      })
+    })
+  </script>
+</body>
+
+</html>
