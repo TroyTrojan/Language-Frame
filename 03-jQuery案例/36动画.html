@@ -22,14 +22,24 @@
 
 <body>
     <button>显示</button>
+    <button>显示隐藏切换</button>
     <button>隐藏</button>
     <div id=""></div>
     <script>
         $('button:first').on('click', function () {
-            $('div').show('slow')
+            $('div').show('slow', function () {
+                alert(111)
+            })
+        })
+        $('button:eq(1)').on('click', function () {
+            $('div').toggle(1000, function () {
+                alert(666)
+            })
         })
         $('button:last').on('click', function () {
-            $('div').hide()
+            $('div').hide(200, function () {
+                alert(222)
+            })
         })
     </script>
 </body>
