@@ -24,14 +24,13 @@
   <script>
     $('input[type=button]').on('click', function () {
       $('.wrap').slideDown(1000, function () {
-        var img = $('.starWrap img');
-        var index = 0;
+        var img = $('.starWrap img:odd');
+        var img2 = $('.starWrap img:even');
         function showImg() {
-          img.eq(index).fadeOut(500);
-          index = (index + 1) % img.length;
-          img.eq(index).fadeIn(500);
+          img.fadeToggle(200);
+          img2.fadeToggle(50);
         }
-        setInterval(showImg, 1000);
+        setInterval(showImg, 500);
       })
     })
   </script>
