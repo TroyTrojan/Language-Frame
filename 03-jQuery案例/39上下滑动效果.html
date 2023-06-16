@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button>上滑</button>
+    <button>下滑</button>
+    <button>切换</button>
+    <div></div>
+    <script>
+        $('button:eq(0)').on('click', function () {
+            $('div').slideUp()
+        })
+        $('button:eq(1)').on('click', function () {
+            $('div').slideDown(1000)
+        })
+        $('button:eq(2)').on('click', function () {
+            $('div').slideToggle('fast', function () {
+                alert(111)
+            })
+        })
+    </script>
+</body>
+
+</html>
