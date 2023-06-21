@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <button>单击</button>
+    <div>111</div>
+    <script>
+        $('button').click(function () {
+            // $('div').css({
+            //     width: '100px',
+            //     height: '100px',
+            //     background: 'green',
+            // })
+            $('div').animate({
+                width: '200px',
+                height: '200px',
+            }, 1000, function () {
+                alert('动画完成')
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -21,8 +21,8 @@
             var box = $('.box');
             box.width(0);
             function animateWidth() {
-                box.animate({ width: '400px' }, 1000, 'linear', function () {
-                    box.animate({ width: '0px' }, 1000, 'linear', animateWidth);
+                box.animate({ width: '400px' }, 1000, function () {
+                    box.animate({ width: '0px' }, 1000, animateWidth);
                 });
             }
             animateWidth();
