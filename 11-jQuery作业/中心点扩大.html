@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">扩大盒子</button>
+    <div id="box"></div>
+    <script>
+        $('#btn').on('click', function () {
+            $('div').animate({
+                width: '200px',
+                height: '200px',
+                margin: '150px',
+            })
+        })
+    </script>
+</body>
+
+</html>

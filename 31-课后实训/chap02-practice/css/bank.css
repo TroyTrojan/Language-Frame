@@ -1,0 +1,40 @@
+aside {
+	border: solid 1px #CCCCCC;
+	padding-top: 1.25rem;
+	padding-left: 0.625rem;
+
+
+}
+
+aside ul li {
+	padding: 5px 5px;
+}
+
+main {
+	margin-left: -15px;
+	border: solid 1px #CCCCCC;
+	padding-top: 1.25rem;
+	padding-left: 0.625rem;
+}
+
+section {
+	padding: 5px 10px;
+}
+
+footer {
+	background-color: #f8f8f8;
+	border-color: #e7e7e7;
+	height: 50px;
+	border: 1px solid #e7e7e7;
+	border-radius: 4px;
+	margin-top: 20px;
+	padding: 15px 0px;
+}
+
+h5 {
+	font-weight: bold;
+	font-size: 15px;
+}
+p{
+	margin: 0px;
+}
