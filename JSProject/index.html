@@ -8,19 +8,23 @@
     <title>Document</title>
     <script src="./jquery-3.6.3.min.js"></script>
     <style>
-        .test {
+        #box {
+            width: 50px;
+            height: 50px;
             background-color: red;
         }
     </style>
 </head>
 
 <body>
-    <div id="box">111</div>
+    <h1 id="box">111</h1>
     <script>
         // $('#box').hasClass('test');
         // $('#box').add('test');
         // $('#box').attr('class', 'test');
-        $('#box').addClass('test');
+        // $('#box').addClass('test');
+        // $('#box').css('border-radius', '50%')
+        $('#box').text('helloWorld')
     </script>
 </body>
 
