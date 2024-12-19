@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>产品介绍</title>
+  <style type="text/css">
+    .product {
+      width: 500px;
+      border: 1px solid #ff6600;
+      border-collapse: collapse;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+    }
+
+    .product td {
+      border: 2px solid #ff6600;
+      padding: 5px;
+    }
+
+    .productName {
+      font-size: 16px;
+      color: #993300;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .category {
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: bold;
+      background-color: #993300;
+      text-align: left;
+      padding: 8px 0;
+    }
+
+    .productImg {
+      text-align: center;
+      vertical-align: middle;
+      width: 170px;
+    }
+
+    .productDescription {
+      background-color: #ffe8a8;
+      width: 308px;
+    }
+
+    .paraName {
+      font-size: 13px;
+      color: #666666;
+      text-align: left;
+      width: 70px;
+    }
+
+    .paraValue {
+      font-size: 13px;
+      text-align: left;
+      padding-left: 5px;
+    }
+
+    .paraTable td {
+      border: none;
+      padding: 2px;
+      /* 减少内边距，使内容紧凑 */
+    }
+
+    table.innerTable {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    table.innerTable td {
+      border: none;
+      padding: 2px;
+      /* 减少列间距 */
+    }
+  </style>
+</head>
+
+<body>
+  <table class="product">
+    <!-- 产品描述部分 -->
+    <tr>
+      <td><img src="./image/1.png" width="256" height="157" alt="人物图片" class="productImg"></td>
+      <td class="productDescription">
+        <p class="productName">人物介绍：小灰灰</p>
+        <p class="paraValue">佳能官方标配<br>
+          松下原装<br>
+          佳能<br>
+          索尼<br>
+          摄影指南</p>
+      </td>
+    </tr>
+
+    <!-- 主要参数部分 -->
+    <tr>
+      <td colspan="2" class="category">主要参数</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table class="innerTable">
+          <tr>
+            <td class="paraName">型&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp号：</td>
+            <td class="paraValue">PMP168B</td>
+          </tr>
+          <tr>
+            <td class="paraName">内存容量：</td>
+            <td class="paraValue">512MB</td>
+          </tr>
+          <tr>
+            <td class="paraName">屏幕尺寸：</td>
+            <td class="paraValue">2.12英寸</td>
+          </tr>
+          <tr>
+            <td class="paraName">屏幕特性：</td>
+            <td class="paraValue">LTPS</td>
+          </tr>
+          <tr>
+            <td class="paraName">视觉功能：</td>
+            <td class="paraValue">支持ASF</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- 功能参数部分 -->
+    <tr>
+      <td colspan="2" class="category">功能参数</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <p class="paraValue" style="text-align: left;">暂无数据</p>
+      </td>
+    </tr>
+
+    <!-- 其他参数部分 -->
+    <tr>
+      <td colspan="2" class="category">其他参数</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <p class="paraValue" style="text-align: left;">暂无数据</p>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

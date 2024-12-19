@@ -1,0 +1,111 @@
+<html>
+
+<head>
+  <title>教材选购单</title>
+  <style type="text/css">
+    body {
+      margin: 0px;
+      text-align: center;
+      background: #FFFFFF;
+      line-height: 15px;
+    }
+
+    /*基本信息*/
+    #container {
+      width: 80%;
+      margin-left: 52px;
+    }
+
+    /*页面层容器*/
+    #Header {
+      width: 800px;
+      padding-top: 40px;
+      /*页面头部*/
+      margin-left: -177px;
+      height: 60px;
+    }
+
+    #PageBody {
+      width: 800px;
+    }
+
+    /*页面主体*/
+    .ContentBody {
+      border: 2px solid black;
+      width: 450px;
+      padding: 8px;
+    }
+
+    /*教材选购提示文字*/
+    .title {
+      color: #aa0000;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    /*教材目录背景为灰，边为点线*/
+    .textList {
+      background-color: #f7f7f7;
+      border: 1px dotted #808080;
+      width: 400px;
+      height: auto;
+      padding-top: 8px;
+      padding-bottom: 15px;
+      margin-top: 8px;
+    }
+
+    /*教材目录项*/
+    .div_height {
+      margin-left: 8px;
+      margin-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    /*发送按钮*/
+    .fasong {
+      background-color: #ffffff;
+      width: 400px;
+      margin-top: 8px;
+      padding-top: 8px;
+      padding-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 页面层容器 -->
+  <div id="Container">
+    <!--页面头部-->
+    <div id="Header">
+      <h2>教材选购单</h2>
+    </div>
+    <!--页面主体-->
+    <div id="PageBody">
+      <div class="ContentBody">
+        <!--标题部分-->
+        <div class="title">你想订哪几本教材？</div>
+        <!--教材列表部分-->
+        <form>
+          <div class="textList">
+            <div class="div_height" align="left">
+              <input type="checkbox" name="textbook" value="JSP 实用教程（第二版）">JSP 实用教程（第二版）
+            </div>
+            <div class="div_height" align="left">
+              <input type="checkbox" name="textbook" value="SQL Server开发与维护">SQL Server开发与维护
+            </div>
+          </div>
+          <!--提交按钮-->
+          <div class="fasong">
+            <div class="div_height" align="left">
+              <input type="submit" value="发送教材选购单" onclick="createOrder()">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
